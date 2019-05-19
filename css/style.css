@@ -1,12 +1,9 @@
 body{
     background-color: #2b2b2a;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 15%;
 }
 canvas{
-    background-color: #79b260;
+    background: #79b260;
     border-radius: 5px;
-    width: 480px;
-    height: 250px;
-    /* width="480" height="320" */
 }
