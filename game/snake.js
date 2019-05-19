@@ -2,7 +2,7 @@ var draw = function () {
   var game = document.getElementById('myGame');
   var ctx = game.getContext('2d');
 
-  var currentPosition = [50, 50];
+  var currentPosition = [game.width / 2, game.height / 2];
   var direction;
   var moveLeft = true;
   var moveRight = true;
@@ -155,7 +155,7 @@ var draw = function () {
 
 
   var gameOver = function () {
-    currentPosition = [50, 50];
+    currentPosition = [game.width / 2, game.height / 2];
     direction;
     moveLeft = true;
     moveRight = true;
