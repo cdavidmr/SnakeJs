@@ -35,7 +35,7 @@ var draw = function () {
           direction = 'left';
           // set new position, and draw square at that position.
           currentPosition[0] = currentPosition[0] - 2;
-          drawSnake(currentPosition[0], currentPosition[1]);
+          // drawSnake(currentPosition[0], currentPosition[1]);
           reset = false;
         }
         break;
@@ -47,7 +47,7 @@ var draw = function () {
           console.log('up');
           direction = 'up';
           currentPosition[1] = currentPosition[1] - 10;
-          drawSnake(currentPosition[0], currentPosition[1]);
+          // drawSnake(currentPosition[0], currentPosition[1]);
           reset = false;
         }
         break;
@@ -59,7 +59,7 @@ var draw = function () {
           console.log('right');
           direction = 'right';
           currentPosition[0] = currentPosition[0] + 2;
-          drawSnake(currentPosition[0], currentPosition[1]);
+          // drawSnake(currentPosition[0], currentPosition[1]);
           reset = false;
         }
         break;
@@ -71,7 +71,7 @@ var draw = function () {
           console.log('down');
           direction = 'down';
           currentPosition[1] = currentPosition[1] + 2;
-          drawSnake(currentPosition[0], currentPosition[1]);
+          // drawSnake(currentPosition[0], currentPosition[1]);
           reset = false;
         }
         break;
@@ -152,7 +152,6 @@ var draw = function () {
     ctx.clearRect(0, 0, game.width, game.height);
 
     drawWall();
-    drawSnake(currentPosition[0], currentPosition[1]);
     moveSnake();
 
   }
