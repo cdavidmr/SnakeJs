@@ -170,7 +170,7 @@ var draw = function () {
   }
 
   window.addEventListener("keydown", directionSnake, false);
-  setInterval(play, 500);
+  setInterval(play, 100);
 
 }
 window.addEventListener("load", draw, false);
