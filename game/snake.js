@@ -46,7 +46,7 @@ var draw = function () {
         if (moveUp) {
           console.log('up');
           direction = 'up';
-          currentPosition[1] = currentPosition[1] - 2;
+          currentPosition[1] = currentPosition[1] - 10;
           drawSnake(currentPosition[0], currentPosition[1]);
           reset = false;
         }
@@ -88,12 +88,13 @@ var draw = function () {
     if (!reset) {
       switch (direction) {
         case 'up':
-          if (currentPosition[1] > snakeSize) {
+          if (currentPosition[1] > snakeSize + 4) {
             moveLeft = true;
             moveRight = true;
             moveDown = false;
             moveUp = false;
             currentPosition[1] = currentPosition[1] - snakeSize - 1;
+            console.log(currentPosition[1]);
             drawSnake(currentPosition[0], currentPosition[1]);
           } else {
             gameOver();
@@ -107,6 +108,7 @@ var draw = function () {
             moveDown = false;
             moveUp = false;
             currentPosition[1] = currentPosition[1] + snakeSize + 1;
+            console.log(currentPosition[1]);
             drawSnake(currentPosition[0], currentPosition[1]);
           } else {
             gameOver();
@@ -114,12 +116,13 @@ var draw = function () {
           break;
 
         case 'left':
-          if (currentPosition[0] > snakeSize) {
+          if (currentPosition[0] > snakeSize - 4) {
             moveLeft = false;
             moveRight = false;
             moveDown = true;
             moveUp = true;
             currentPosition[0] = currentPosition[0] - snakeSize - 1;
+            console.log(currentPosition[0]);
             drawSnake(currentPosition[0], currentPosition[1]);
           } else {
             gameOver();
@@ -133,6 +136,7 @@ var draw = function () {
             moveDown = true;
             moveUp = true;
             currentPosition[0] = currentPosition[0] + snakeSize + 1;
+            console.log(currentPosition[0]);
             drawSnake(currentPosition[0], currentPosition[1]);
           } else {
             gameOver();
@@ -166,7 +170,7 @@ var draw = function () {
   }
 
   window.addEventListener("keydown", directionSnake, false);
-  setInterval(play, 200);
+  setInterval(play, 500);
 
 }
 window.addEventListener("load", draw, false);
